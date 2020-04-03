@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import _ from 'lodash';
-import IncrementButton from "./components/IncrementButton";
 import './App.css';
+import IncrementButton from "./components/IncrementButton";
 import ValueInput from "./components/ValueInput";
 
 
@@ -13,7 +13,9 @@ function App() {
 
     const handleValueChange = (ev) => {
         const {name, value} = ev.target;
-        setValue({...values, [name]: +value});
+        value >= 0 && value <= 20
+            ? setValue({...values, [name]: +value})
+            : alert('Please enter an integer from 1 to 20');
     }
 
     const incrementNumber = (n) => {
@@ -22,7 +24,7 @@ function App() {
 
     return (
         <div className="App">
-            <div>Please enter </div>
+            <div className="App-header">Please enter numbers from 1 to 20</div>
             <ValueInput
                 title="Begin incrementing at: "
                 onChange={handleValueChange}
@@ -49,7 +51,7 @@ function App() {
             <div className="decrementButtons">
                 {
                     values.fromValue && values.toValue &&
-                    _.range(values.fromValue, values.toValue + 1, 1).reverse().map(el => (
+                    _.range(values.fromValue, values.toValue + 1, 1).map(el => (
                         <IncrementButton key={el} step={-el} incrementNumber={() => incrementNumber(-el)}/>
                     ))
                 }
@@ -60,7 +62,7 @@ function App() {
 
 export default App;
 
-{/* Original version of input fields. In the current version Input is separated as component*/}
+{/* Original version of input fields. In the current version Input is a separate component*/}
 {/*<div className="valueInput--from">*/}
 {/*    <div className="valueInput-title">Begin Incrementing at:</div>*/}
 {/*    <input type="text" name="fromValue" onChange={handleValueChange}></input>*/}
