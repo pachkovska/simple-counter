@@ -1,9 +1,20 @@
-.App {
+body {
+    background-color: #daedf4;
+    width: 100vw;
+    height: 100vh;
+}
+
+.App-content {
     display: grid;
     grid-template-columns: 1fr 20% 1fr;
     grid-template-rows: 70px 1fr 1fr;
     font-family: Arial;
     justify-items: center;
+    margin: 5% 10% 0 10%;
+    padding: 15px;
+    border: 1px solid rgba(115, 115, 115, 0.15);
+    box-shadow: rgba(0, 0, 0) 2px 4px 8px;
+    background-color: #ffffff;
 }
 
 .App-header {
@@ -33,15 +44,19 @@ input {
 }
 
 .number {
-    grid-row: 3;
+    grid-row: 2 / span 2;
     grid-column: 2;
+    font-size: 48px;
+    align-self: center;
 }
 
 .incrementButtons {
     grid-row: 3;
     grid-column: 1;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
+    justify-content: flex-end;
     justify-self: end;
 }
 
@@ -49,6 +64,24 @@ input {
     grid-row: 3;
     grid-column: 3;
     display: flex;
+    flex-wrap: wrap-reverse;
     flex-direction: row-reverse;
+    justify-content: flex-end;
     justify-self: start;
 }
+
+button {
+    margin: 2px;
+    width: 40px;
+    border-radius: 7px;
+    transition: all .1s ease-in-out;
+    outline-style: none;
+    background-color: #6fbad5;
+}
+
+button:hover {
+    border: 1px solid whitesmoke;
+    transform: translateY(1px);
+    background-color: #8dc9de;
+}
+
