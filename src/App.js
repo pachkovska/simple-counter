@@ -18,7 +18,7 @@ function App() {
 
     const handleValueChange = (name, value) => {
         if (((value < 0 || value > 20) || isNaN(value)) && value !== '') {
-            alert('Sorry non-integers are not allowed') && setValue({...values, [name]: ''});
+            alert('Sorry non-integers or numbers outside of advised range are not allowed') && setValue({...values, [name]: ''});
         } else {
             setValue({...values, [name]: +value});
         }
