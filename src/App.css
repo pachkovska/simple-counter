@@ -7,7 +7,7 @@ body {
 .App-content {
     display: grid;
     grid-template-columns: 1fr 20% 1fr;
-    grid-template-rows: 70px 1fr 1fr;
+    grid-template-rows: 70px 20px 1fr 1fr;
     font-family: Arial;
     justify-items: center;
     margin: 5% 10% 0 10%;
@@ -24,7 +24,7 @@ body {
 }
 
 .valueInput-from {
-    grid-row: 2;
+    grid-row: 3;
     grid-column: 1;
     justify-self: end;
     display: flex;
@@ -38,20 +38,20 @@ input {
 }
 
 .valueInput-to {
-    grid-row: 2;
+    grid-row: 3;
     grid-column: 3;
     justify-self: start;
 }
 
 .number {
-    grid-row: 2 / span 2;
+    grid-row: 3 / span 2;
     grid-column: 2;
     font-size: 48px;
     align-self: center;
 }
 
 .incrementButtons {
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 1;
     display: flex;
     flex-wrap: wrap;
@@ -61,7 +61,7 @@ input {
 }
 
 .decrementButtons {
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 3;
     display: flex;
     flex-wrap: wrap-reverse;
@@ -83,5 +83,20 @@ button:hover {
     border: 1px solid whitesmoke;
     transform: translateY(1px);
     background-color: #8dc9de;
+}
+
+.errorMessage {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+    justify-self: center;
+    align-self: center;
+    font-family: Arial;
+    color: red;
+    border: 0.2px solid red;
+    padding: 5px;
+    font-size: 13px;
+    border-radius: 1px;
+    background-color: #ffdfdf;
+    margin-bottom: 10px;
 }
 
