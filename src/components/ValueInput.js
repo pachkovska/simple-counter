@@ -8,7 +8,7 @@ function ValueInput(props) {
     return (
         <div className={props.className}>
             <div className="valueInput-title">{props.title}</div>
-            <input type="text" name={props.name} onChange={handleChange}></input>
+            <input type="text" name={props.name} value={props.value} onChange={handleChange} placeholder={0}></input>
         </div>
     )
 }
