@@ -5,7 +5,7 @@ User of the app is able to input range of numbers to produce icrementing and dic
 ### Functionality Requirements: 
 
 1. User should not be bale to enter anything but digits into the field. If user tries to enter any letter or special characters, user sees an alert on top of the page. 
-User has to click "OK" for an lert ot go away. Alert is illustrated in the screenshot below.
+User has to click "OK" for an alert to go away. Alert is illustrated in the screenshot below.
 
 ![Screen Shot 2020-04-05 at 12 51 47 PM](https://user-images.githubusercontent.com/19315082/78508660-6df98180-773d-11ea-99fe-63538db1547b.png)
 
